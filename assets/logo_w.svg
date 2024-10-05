@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189.83 40.45">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: RobotoFlex-Bold, 'Roboto Flex';
+        font-size: 35px;
+        font-variation-settings: 'opsz' 14, 'wght' 700, 'GRAD' 0, 'wdth' 100, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #f6f6f6;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #f6f6f6;
+        stroke-width: .25px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        font-family: RobotoFlex-Light, 'Roboto Flex';
+        font-size: 21px;
+        font-variation-settings: 'opsz' 14, 'wght' 300, 'GRAD' 0, 'wdth' 100, 'slnt' 0, 'XOPQ' 96, 'YOPQ' 79, 'XTRA' 468, 'YTUC' 712, 'YTLC' 514, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g>
+      <text class="cls-1" transform="translate(87.7 30.07)"><tspan x="0" y="0">Select</tspan></text>
+      <text/>
+      <polyline class="cls-2" points=".07 38.01 80.06 26.11 83.63 38.01 189.01 38.01"/>
+      <g>
+        <circle class="cls-2" cx="20.7" cy="9.7" r="6.36"/>
+        <circle class="cls-2" cx="20.7" cy="9.7" r="6.36"/>
+        <circle class="cls-2" cx="23.59" cy="24.44" r="6.36"/>
+        <circle class="cls-2" cx="8.03" cy="27.49" r="6.36"/>
+      </g>
+      <text class="cls-3" transform="translate(33.12 27.5) rotate(-8.56)"><tspan x="0" y="0">smart</tspan></text>
+    </g>
+  </g>
+</svg>
