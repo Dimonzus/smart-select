@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+    <title>Smart Select</title>
+  </head>
+  <body class="max-w-[2000px] mx-auto text-neutral-900 dark:text-neutral-200 bg-white dark:bg-neutral-800">
+
+    <nav class="mx-auto p-4 sticky z-20 top-0 bg-amber-400 lg:p-0">
+      <div class="
+      container
+      mx-auto
+      flex
+      justify-between
+      ">
+      <a href="/" class="
+      focus:outline-none
+        focus-visible:ring-4
+        ring-neutral-900
+        rounded-sm
+        ring-offset-4
+        ring-offset-amber-400
+        z-50
+        lg:my-auto
+        hover:opacity-75
+        transition-opacity
+      " aria-label="Go to homepage">
+        <img src="./images/logo2.svg" width="100" class="w-48 md:w-56 md:ml-4 lg:w-64" alt="Smart Select Logo">
+      </a>
+      <button id="menu" class="
+        lg:hidden
+        focus:outline-none
+        focus-visible:ring-4
+        ring-neutral-900
+        rounded-sm
+        ring-offset-4
+        ring-offset-amber-400
+        text-neutral-900
+        hover:text-neutral-600
+        transition-colors
+        " 
+        aria-expanded="false"
+        aria-label="Open Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div role="menubar" class="
+        hidden
+        flex-col
+        gap-4
+        absolute
+        z-40
+        right-0
+        left-0
+        top-16
+        bg-amber-400
+        shadow-xl
+        text-center
+        text-lg
+        p-6
+        items-center
+        lg:flex
+        lg:flex-row
+        lg:static
+        lg:shadow-none
+        lg:justify-end
+        
+      ">
+      <a role="menuitem" 
+      class="
+      py-1
+        px-6
+        dark:text-neutral-900
+        focus:outline-none
+        focus-visible:ring-4
+        ring-neutral-900
+        rounded-sm
+        ring-offset-4
+        ring-offset-amber-400
+        hover:text-neutral-600
+        transition-colors
+      " href="/">Работодателю</a>
+      <a role="menuitem" 
+        class="
+          py-1
+          px-6
+          dark:text-neutral-900
+          focus:outline-none
+          focus-visible:ring-4
+          ring-neutral-900
+          rounded-sm
+          ring-offset-4
+          ring-offset-amber-400
+          hover:text-neutral-600
+          transition-colors
+          
+          " 
+          href="/">
+          Соискателю
+        </a>
+        <a role="menuitem" class="
+          py-1
+          px-6
+          dark:text-neutral-900
+          focus:outline-none
+          focus-visible:ring-4
+          ring-neutral-900
+          rounded-sm
+          ring-offset-4
+          ring-offset-amber-400
+          hover:text-neutral-600
+          transition-colors
+          " 
+          href="/">
+          О нас
+        </a>
+        
+        <a role="menuitem" 
+        class="
+          py-2
+          px-6
+          bg-teal-900
+          text-white
+          shadow-xl
+          hover:shadow-none
+          transition-shadow
+          focus:outline-none
+          focus-visible:ring-4
+        ring-neutral-900
+          rounded-md
+          ring-offset-4
+        ring-offset-amber-400
+        " href="/">
+        Заказать звонок
+        </a>
+
+      </div>
+
+      </div>
+    </nav>
+
+
+    <header>
+    <section class="relative h-2/3 md:h-screen w-full bg-cover bg-center" style="background-image: url('./images/team.jfif');">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-25"></div>
+  
+      <!-- Content -->
+      <div class="relative z-10 flex flex-col justify-center h-full text-white px-6 py-12 md:items-start md:text-left md:px-16">
+          <h2 class="text-4xl md:text-6xl w-3/4 font-bold mb-4">Лучшая команда для вашего проекта</h2>
+          <p class="text-base md:text-base my-8 sm:my-6 max-w-md">Наша платформа позволит найти налучшие варианты для вашего проекта или построить успешную карьеру.</p>
+          <a href="#" 
+          class="
+          py-2
+          w-40
+          px-6
+          bg-amber-400
+          dark:text-neutral-900
+          my-8
+          sm:my-6
+          flex
+          text-neutral-900
+          gap-2
+          shadow-xl
+          hover:shadow-none
+          transition-shadow 
+          focus:outline-none
+          focus-visible:ring-4
+          ring-gray-700
+          rounded-md
+          ring-offset-4
+          ring-offset-white
+          dark:ring-amber-400
+          dark:ring-offset-neutral-800
+          ">  
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
+          </svg>       
+          <span>Войти</span>
+        </a>
+      </div>
+  </section>
+    
+    </header>
+
+    <!--Main-->
+
+    <main class="
+    grid
+    gap-12
+    sm:gap-16
+    md:gap-24
+    lg:gap-32
+    px-8
+    overflow-hidden
+    ">
+
+  <section aria-labelledby="qualities" class="relative mt-16 lg:mt-28">
+    <img src="./images/dots.svg" 
+      class="
+      hidden
+      lg:block
+      absolute
+      top-1/2
+      -translate-y-1/2
+      -left-24
+      xl:-left-7
+      " 
+      alt="dots" aria-hidden="true">
+    <img src="./images/dots.svg" 
+      class="
+      hidden
+      lg:block
+      absolute
+      top-1/2
+      -translate-y-1/2
+      -right-24
+      xl:-right-7
+      "
+      alt="dots" aria-hidden="true">
+    <h2 id="qualities" class="text-amber-400 text-center text-4xl font-bold mx-auto mb-14">Мы предлагаем</h2>
+    <div
+      class="container
+        mx-auto
+        max-w-5xl
+        flex
+        gap-12
+        flex-wrap
+        items-start
+        justify-center
+        md:justify-between
+      ">
+      <div 
+        class="
+        grid
+        gap-4
+        justify-items-center
+        text-center
+        md:flex-1
+      ">
+        <div 
+          class="
+            rounded-full
+            border-8
+            border-amber-400
+            p-4
+          ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold">Конфедициальность</h3>
+        <p>Песонализированный сервис по поиску вакансий и найму сотрудников</p>
+      </div>
+      <div
+      class="
+        grid
+        gap-4
+        justify-items-center
+        text-center
+        md:flex-1
+        ">
+        <div 
+          class="
+          rounded-full
+          border-8
+          border-amber-400
+          p-4
+          ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold">Эффективность</h3>
+        <p>
+          Лучшие компании для соискателей и отбор кандидадтур под запросы проекта
+        </p>
+      </div>
+      <div 
+        class="
+        grid
+        gap-4
+        justify-items-center
+        text-center
+        md:flex-1
+        ">
+        <div 
+          class="
+          rounded-full
+          border-8
+          border-amber-400
+          p-4
+          ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold">Рейтинг</h3>
+        <p>
+          Большой опыт работы и национальными и международными компаниями
+        </p>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!--Section Partners-->
+
+  <section aria-labelledby="partners" class="text-center grid gap-8 place-items-center">
+    <div class="grid gap-4">
+      <h2 id="partners" class="text-4xl font-bold text-amber-400">Наши партнеры</h2>
+      <p class="w-full max-w-lg">Мы рады быть партнерами компаний, которые работают с нами, мы стараемся стать частью прорывных решений и проектов.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 md:gap-x-16 max-w-2xl mx-auto">
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner1.svg" alt="Partner" class="h-16 w-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner2.svg" alt="Partner" class="h-16 w-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner3.svg" alt="Partner" class="h-16 w-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner4.svg" alt="Partner" class="h-16 w-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner5.svg" alt="Partner" class="h-16 w-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner6.svg" alt="Partner" class="h-16 w-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./images/partner7.svg" alt="Partner" class="h-16 w-16">
+      </div>
+    </div>
+  </section>
+
+   <!--Section Achievments-->
+   <section class="py-12">
+   <div class="container mx-auto text-center">
+       <h2 class="text-4xl font-bold mb-10">Наши достижения</h2>
+       
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+           <!-- Achievement 1 -->
+           <div class="flex flex-col place-content-center">
+              
+                   <!-- Используем иконку из библиотеки, например, Heroicons -->
+                   <svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.16 101.16" class="w-20 h-20 mb-8 mx-auto">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #fef3c7;
+                        }
+                  
+                        .cls-1, .cls-2, .cls-3 {
+                          stroke-width: 0px;
+                        }
+                  
+                        .cls-2 {
+                          fill: #fbbf24;
+                        }
+                  
+                        .cls-3 {
+                          fill: #fff;
+                        }
+                      </style>
+                    </defs>
+                    <g id="_1" data-name="1">
+                      <g>
+                        <rect class="cls-3" width="101.16" height="101.16"/>
+                        <g id="C33_Badges_insignia_post_ribbon_stamp" data-name="C33, Badges, insignia, post, ribbon, stamp">
+                          <rect class="cls-1" x="21.04" y="21.04" width="58.17" height="58.17"/>
+                          <rect class="cls-3" x="26.1" y="26.1" width="48.05" height="48.05"/>
+                          <polygon class="cls-1" points="53.72 59.38 50.78 61.61 51.89 65.25 48.96 63.02 46.03 65.25 47.14 61.61 44.31 59.38 47.85 59.38 48.96 55.84 50.07 59.38 53.72 59.38"/>
+                          <path class="cls-2" d="M79.21,80.42H21.04c-.71,0-1.31-.61-1.31-1.32V21.04c0-.71.61-1.32,1.31-1.32h58.17c.71,0,1.31.61,1.31,1.32v58.17c-.1.61-.71,1.21-1.31,1.21ZM22.25,77.89h55.64V22.25H22.25v55.64Z"/>
+                          <path class="cls-2" d="M74.15,75.36H26.1c-.71,0-1.32-.61-1.32-1.32V26.1c0-.71.61-1.32,1.32-1.32h48.05c.71,0,1.32.61,1.32,1.32v48.05c-.1.61-.71,1.21-1.32,1.21ZM27.31,72.83h45.52V27.31H27.31v45.52Z"/>
+                          <path class="cls-2" d="M62.21,36.22h-25.29c-.71,0-1.31-.61-1.31-1.32s.61-1.32,1.31-1.32h25.29c.71,0,1.32.61,1.32,1.32-.1.71-.61,1.32-1.32,1.32Z"/>
+                          <path class="cls-2" d="M62.21,43.7h-25.29c-.71,0-1.31-.61-1.31-1.32s.61-1.31,1.31-1.31h25.29c.71,0,1.32.61,1.32,1.31-.1.71-.61,1.32-1.32,1.32Z"/>
+                          <path class="cls-2" d="M62.21,51.29h-25.29c-.71,0-1.31-.61-1.31-1.32s.61-1.31,1.31-1.31h25.29c.71,0,1.32.61,1.32,1.31s-.61,1.32-1.32,1.32Z"/>
+                          <path class="cls-2" d="M51.89,66.56c-.3,0-.51-.1-.81-.3l-2.12-1.62-2.12,1.62c-.4.3-1.01.3-1.52,0-.4-.3-.61-.91-.51-1.42l.81-2.73-2.12-1.72c-.41-.3-.61-.91-.41-1.42.2-.51.61-.81,1.21-.81h2.73l.81-2.73c.2-.51.61-.91,1.21-.91h0c.51,0,1.01.4,1.21.91l.81,2.73h2.63c.51,0,1.01.3,1.21.81.2.51,0,1.11-.41,1.42l-2.22,1.72.81,2.73c.2.51,0,1.11-.51,1.42-.2.2-.4.3-.71.3ZM47.95,60.7c.41.3.51.81.41,1.21.3-.2.81-.2,1.11,0-.1-.41.1-.91.4-1.21-.4,0-.81-.3-1.01-.61-.1.3-.41.61-.91.61Z"/>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+               <h4 class="text-xl font-semibold mb-2">100+ Успешных Проектов</h4>
+               <p class="text-sm text-gray-600">Мы подобрали команды для более чем 100 проектов, с отличным фидбэком.</p>
+           </div>
+
+           <!-- Achievement 2 -->
+           <div class="p-6 flex flex-col place-content-center">
+            <svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.16 101.16" class="w-20 h-20 mb-8 mx-auto">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fef3c7;
+                  }
+            
+                  .cls-1, .cls-2, .cls-3 {
+                    stroke-width: 0px;
+                  }
+            
+                  .cls-2 {
+                    fill: #fbbf24;
+                  }
+            
+                  .cls-3 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g id="_1" data-name="1">
+                <g>
+                  <rect class="cls-3" width="101.16" height="101.16"/>
+                  <g id="C48_Achievement_award_crown_wreath" data-name="C48, Achievement, award, crown, wreath">
+                    <polygon class="cls-1" points="64.03 52.6 50.07 37.43 36.21 52.6 29.84 45.02 33.69 71.62 66.56 71.62 70.31 45.02 64.03 52.6"/>
+                    <path class="cls-3" d="M27.31,75.36c0-1.01.41-2.02,1.11-2.73.71-.71,1.62-1.11,2.73-1.11h37.93c2.12,0,3.84,1.72,3.84,3.84,0,1.01-.4,2.02-1.11,2.73-.71.71-1.62,1.11-2.73,1.11H31.16c-2.12,0-3.84-1.72-3.84-3.84Z"/>
+                    <polygon class="cls-3" points="33.69 25.79 30.35 29.03 31.26 33.69 27.31 31.36 23.37 33.69 24.28 29.03 21.04 25.79 25.49 25.29 27.31 21.04 29.13 25.29 33.69 25.79"/>
+                    <polygon class="cls-3" points="79.21 32.47 76.48 35 77.18 38.74 74.15 36.82 71.01 38.74 71.72 35 69.09 32.47 72.63 31.97 74.15 28.63 75.57 31.97 79.21 32.47"/>
+                    <path class="cls-3" d="M50.07,29.84c2.12,0,3.84,1.72,3.84,3.84s-1.72,3.84-3.84,3.84-3.84-1.72-3.84-3.84,1.72-3.84,3.84-3.84Z"/>
+                    <path class="cls-3" d="M59.68,61.5c1.01,0,1.92.81,1.92,1.92s-.91,1.82-1.92,1.82-1.92-.81-1.92-1.92.91-1.82,1.92-1.82Z"/>
+                    <path class="cls-3" d="M49.57,61.5c1.01,0,1.92.81,1.92,1.92s-.91,1.82-1.92,1.82-1.92-.81-1.92-1.92.91-1.82,1.92-1.82Z"/>
+                    <path class="cls-3" d="M39.45,61.5c1.01,0,1.92.81,1.92,1.92s-.91,1.82-1.92,1.82-1.92-.81-1.92-1.92.91-1.82,1.92-1.82Z"/>
+                    <path class="cls-2" d="M69.09,80.42H31.16c-2.83,0-5.06-2.23-5.06-5.06,0-1.32.51-2.63,1.52-3.54.91-.91,2.23-1.52,3.54-1.52h2.53c.71,0,1.32.61,1.32,1.31s-.61,1.32-1.32,1.32h-2.53c-.71,0-1.32.3-1.82.71-.51.51-.71,1.11-.71,1.82,0,1.42,1.11,2.53,2.53,2.53h37.93c.71,0,1.31-.3,1.82-.71.51-.51.71-1.11.71-1.82,0-1.42-1.11-2.53-2.53-2.53h-2.53c-.71,0-1.32-.61-1.32-1.32s.61-1.31,1.32-1.31h2.53c2.83,0,5.06,2.23,5.06,5.06,0,1.32-.51,2.63-1.52,3.54-1.01.91-2.23,1.52-3.54,1.52Z"/>
+                    <path class="cls-2" d="M66.56,72.83h-32.88c-.61,0-1.11-.51-1.21-1.11l-3.84-26.6c-.1-.61.2-1.11.71-1.32.51-.2,1.11-.1,1.52.3l5.36,6.47,12.95-14.06c.2-.3.61-.41.91-.41.41,0,.71.1.91.41l12.95,14.06,5.36-6.47c.4-.41,1.01-.61,1.52-.3.51.2.81.81.71,1.32l-3.74,26.6c-.1.61-.61,1.11-1.21,1.11ZM34.7,70.31h30.65l3.04-21.04-3.44,4.15c-.2.3-.61.4-.91.4-.4,0-.71-.1-1.01-.4l-12.95-14.16-12.95,14.16c-.2.3-.61.4-1.01.4s-.71-.2-.91-.4l-3.44-4.15,2.93,21.04Z"/>
+                    <path class="cls-2" d="M50.07,38.74c-2.83,0-5.06-2.23-5.06-5.06s2.23-5.06,5.06-5.06,5.06,2.23,5.06,5.06-2.23,5.06-5.06,5.06ZM50.07,31.16c-1.42,0-2.53,1.11-2.53,2.53s1.11,2.53,2.53,2.53,2.53-1.11,2.53-2.53-1.11-2.53-2.53-2.53Z"/>
+                    <path class="cls-2" d="M59.68,66.56c-1.72,0-3.14-1.42-3.14-3.14s1.42-3.14,3.14-3.14,3.14,1.42,3.14,3.14c0,1.62-1.42,3.14-3.14,3.14ZM59.68,62.72c-.3,0-.61.3-.61.61s.3.61.61.61.61-.3.61-.61-.3-.61-.61-.61Z"/>
+                    <path class="cls-2" d="M49.57,66.56c-1.72,0-3.14-1.42-3.14-3.14s1.42-3.14,3.14-3.14,3.14,1.42,3.14,3.14c0,1.62-1.42,3.14-3.14,3.14ZM49.57,62.72c-.3,0-.61.3-.61.61s.3.61.61.61.61-.3.61-.61-.3-.61-.61-.61Z"/>
+                    <path class="cls-2" d="M39.45,66.56c-1.72,0-3.14-1.42-3.14-3.14s1.42-3.14,3.14-3.14,3.14,1.42,3.14,3.14c0,1.62-1.42,3.14-3.14,3.14ZM39.45,62.72c-.3,0-.61.3-.61.61s.3.61.61.61.61-.3.61-.61-.3-.61-.61-.61Z"/>
+                    <path class="cls-2" d="M31.26,34.9c-.2,0-.4-.1-.61-.2l-3.34-1.92-3.24,1.92c-.41.3-1.01.2-1.42-.1-.4-.2-.61-.71-.51-1.21l.71-3.94-2.83-2.73c-.3-.3-.51-.81-.3-1.32.2-.51.61-.81,1.01-.81l3.74-.51,1.62-3.64c.2-.51.61-.81,1.11-.81s.91.3,1.11.81l1.62,3.64,3.74.51c.51.1.91.4,1.01.81.2.51,0,1.01-.3,1.32l-2.83,2.73.71,3.94c.1.51-.1,1.01-.51,1.32,0,.1-.3.2-.51.2ZM27.31,30.04c.2,0,.41.1.61.2l1.52.91-.41-1.82c-.1-.4.1-.81.41-1.11l1.42-1.32-1.82-.2c-.4-.1-.81-.3-1.01-.71l-.71-1.82-.71,1.62c-.2.41-.61.71-1.01.71l-1.82.2,1.42,1.31c.3.3.4.71.4,1.11l-.4,1.82,1.52-.91c.2.1.4,0,.61,0Z"/>
+                    <path class="cls-2" d="M77.18,39.96c-.2,0-.41-.1-.61-.2l-2.53-1.52-2.53,1.52c-.41.3-1.01.2-1.42-.1-.3-.2-.51-.71-.41-1.21l.61-3.04-2.12-2.02c-.3-.3-.51-.81-.3-1.31.2-.51.61-.81,1.01-.81l2.83-.3,1.21-2.73c.2-.51.61-.81,1.11-.81s.91.3,1.11.81l1.21,2.73,2.83.3c.51.1.91.4,1.01.81.2.51,0,1.01-.3,1.31l-2.02,2.02.61,3.04c.1.51-.1,1.01-.51,1.31-.3.1-.51.2-.81.2ZM74.15,35.61c.2,0,.4.1.61.2l.71.4-.2-.91c-.1-.41.1-.81.41-1.11l.71-.71-.91-.1c-.41-.1-.81-.3-1.01-.71l-.3-.81-.3.81c-.2.41-.61.71-1.01.71h-1.01l.71.71c.3.3.4.71.4,1.11l-.2.91.71-.4c.2-.1.4-.1.71-.1Z"/>
+                    <path class="cls-2" d="M42.49,76.68h-15.17c-.71,0-1.31-.61-1.31-1.32s.61-1.32,1.31-1.32h15.17c.71,0,1.32.61,1.32,1.32s-.61,1.32-1.32,1.32Z"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+               <h4 class="text-xl font-semibold mb-2">Лучшие и Опытные Сотрудники</h4>
+               <p class="text-sm text-gray-600">Мы отобрали и сформировали команды высочайшего уровня.</p>
+           </div>
+        
+
+           <!-- Achievement 3 -->
+           <div class="p-6 flex flex-col place-content-center"> 
+                <svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.16 101.16" class="w-20 h-20 mb-8 mx-auto">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #fef3c7;
+                      }
+                
+                      .cls-1, .cls-2, .cls-3 {
+                        stroke-width: 0px;
+                      }
+                
+                      .cls-2 {
+                        fill: #fbbf24;
+                      }
+                
+                      .cls-3 {
+                        fill: #fff;
+                      }
+                    </style>
+                  </defs>
+                  <g id="_1" data-name="1">
+                    <g>
+                      <rect class="cls-3" width="101.16" height="101.16"/>
+                      <g id="C47_Achievements_award_prize_trophy" data-name="C47, Achievements, award, prize, trophy">
+                        <polygon class="cls-1" points="58.98 74.15 58.98 79.21 41.27 79.21 41.27 74.15 46.53 74.15 53.61 74.15 58.98 74.15"/>
+                        <polygon class="cls-3" points="53.61 64.03 53.61 74.15 46.53 74.15 46.53 64.03 50.07 64.03 53.61 64.03"/>
+                        <polygon class="cls-3" points="72.83 21.04 72.83 28.63 67.78 28.63 32.37 28.63 27.31 28.63 27.31 21.04 72.83 21.04"/>
+                        <path class="cls-1" d="M67.78,36.82v9.71c-.1,9.71-7.99,17.5-17.7,17.5s-17.6-7.89-17.7-17.5v-17.91h35.41v8.19Z"/>
+                        <path class="cls-2" d="M50.07,65.25c-5.06,0-9.71-1.92-13.35-5.46-3.54-3.54-5.56-8.19-5.66-13.25v-17.91c0-.71.61-1.32,1.32-1.32s1.31.61,1.31,1.32v17.91c.1,8.9,7.49,16.19,16.39,16.19s16.29-7.28,16.39-16.19v-17.91c0-.71.61-1.32,1.31-1.32s1.32.61,1.32,1.32v17.91c-.1,5.06-2.02,9.71-5.67,13.25-3.64,3.54-8.29,5.46-13.35,5.46Z"/>
+                        <path class="cls-2" d="M51.39,57.66c-.71,0-1.31-.61-1.31-1.31s.61-1.32,1.31-1.32c4.86,0,8.9-5.87,8.9-8.9,0-.71.61-1.32,1.32-1.32s1.31.61,1.31,1.32c0,2.22-1.21,4.96-3.24,7.28-2.63,2.83-5.46,4.25-8.29,4.25Z"/>
+                        <path class="cls-2" d="M72.83,29.84H27.31c-.71,0-1.32-.61-1.32-1.32v-7.59c0-.71.61-1.31,1.32-1.31h45.52c.71,0,1.31.61,1.31,1.31v7.59c0,.71-.61,1.32-1.31,1.32ZM28.63,27.31h42.99v-5.06H28.63v5.06Z"/>
+                        <path class="cls-2" d="M53.61,75.36c-.71,0-1.31-.61-1.31-1.32v-8.9h-4.55v8.9c0,.71-.61,1.32-1.32,1.32s-1.32-.61-1.32-1.32v-10.12c0-.71.61-1.32,1.32-1.32h7.08c.71,0,1.31.61,1.31,1.32v10.12c.1.71-.51,1.32-1.21,1.32Z"/>
+                        <path class="cls-2" d="M58.98,80.42c-.71,0-1.31-.61-1.31-1.31v-3.84h-15.17v3.84c0,.71-.61,1.31-1.31,1.31s-1.32-.61-1.32-1.31v-5.06c0-.71.61-1.31,1.32-1.31h17.7c.71,0,1.31.61,1.31,1.31v5.06c0,.71-.61,1.31-1.21,1.31Z"/>
+                        <path class="cls-2" d="M79.21,80.42H21.04c-.71,0-1.31-.61-1.31-1.31s.61-1.32,1.31-1.32h58.17c.71,0,1.31.61,1.31,1.32-.1.71-.71,1.31-1.31,1.31Z"/>
+                        <path class="cls-2" d="M25.69,53.82c-.91,0-1.82-.3-2.53-.91-.51-.41-.71-1.21-.2-1.82.51-.61,1.21-.71,1.82-.2.2.2.91.71,2.23,0,1.92-.91,3.44-3.34,3.64-4.35-9.81-4.55-11.23-8.5-10.62-10.93.51-2.53,3.34-4.25,6.78-4.15,3.64,0,6.37,2.02,6.98,5.06.1.71-.3,1.31-1.01,1.52-.71.1-1.31-.3-1.52-1.01-.51-2.23-2.63-3.04-4.55-3.04-2.12,0-4.05.91-4.35,2.23-.4,1.72,1.92,4.75,9.51,8.3.71.3,1.21,1.11,1.21,2.02,0,2.23-2.43,5.46-5.06,6.78-.81.4-1.62.51-2.33.51Z"/>
+                        <path class="cls-2" d="M74.45,53.82c-.71,0-1.52-.2-2.33-.61-2.63-1.32-5.06-4.55-5.06-6.78,0-.91.4-1.62,1.21-2.02,7.59-3.54,9.91-6.58,9.51-8.29-.3-1.21-2.12-2.23-4.25-2.23h0c-1.92,0-4.05.81-4.55,3.04-.1.71-.81,1.11-1.52,1.01-.71-.1-1.11-.81-1.01-1.52.61-3.04,3.34-4.96,6.98-5.06h.1c3.44,0,6.17,1.72,6.78,4.15.51,2.43-.91,6.37-10.62,10.92.2,1.01,1.72,3.44,3.64,4.35,1.31.71,2.02.1,2.23,0,.51-.4,1.31-.3,1.82.2.4.51.3,1.31-.2,1.82-.91.81-1.82,1.01-2.73,1.01Z"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+
+                <h4 class="text-xl font-semibold mb-2">Сервис который ценят</h4>
+                <p class="text-sm text-gray-600">Мы благодарны рекомендациям наших клиентов и гордимся их достижениями</p>
+               
+              
+            </div>
+
+           <!-- Achievement 4 -->
+           <div class="p-6 flex flex-col place-content-center">
+               
+            <svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.16 101.16" class="w-20 h-20 mb-8 mx-auto">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fef3c7;
+                  }
+            
+                  .cls-1, .cls-2, .cls-3 {
+                    stroke-width: 0px;
+                  }
+            
+                  .cls-2 {
+                    fill: #fbbf24;
+                  }
+            
+                  .cls-3 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g id="_1" data-name="1">
+                <g>
+                  <rect class="cls-3" width="101.16" height="101.16"/>
+                  <g id="C8_Badge_badges_insignia_ribbon_stamp" data-name="C8, Badge, badges, insignia, ribbon, stamp">
+                    <rect class="cls-3" x="21.04" y="36.21" width="8.9" height="12.65"/>
+                    <rect class="cls-3" x="70.31" y="36.21" width="8.9" height="12.65"/>
+                    <path class="cls-1" d="M29.84,28.63v30.35c0,11.13,9.1,20.23,20.23,20.23s20.23-9.1,20.23-20.23v-30.35H29.84Z"/>
+                    <polygon class="cls-3" points="62.62 49.16 54.93 54.83 57.86 64.03 50.07 58.27 42.28 64.03 45.22 54.83 37.53 49.16 47.14 49.16 50.07 39.96 53.01 49.16 62.62 49.16"/>
+                    <path class="cls-2" d="M70.31,37.43c-.71,0-1.32-.61-1.32-1.31v-6.37H31.16v6.37c0,.71-.61,1.31-1.32,1.31s-1.31-.61-1.31-1.31v-7.59c0-.71.61-1.31,1.31-1.31h40.46c.71,0,1.31.61,1.31,1.31v7.59c0,.71-.61,1.31-1.31,1.31Z"/>
+                    <path class="cls-2" d="M50.07,80.42c-11.84,0-21.55-9.61-21.55-21.55v-10.12c0-.71.61-1.32,1.31-1.32s1.32.61,1.32,1.32v10.12c0,10.42,8.5,19.02,19.02,19.02s19.02-8.5,19.02-19.02v-10.12c0-.71.61-1.32,1.31-1.32s1.32.61,1.32,1.32v10.12c-.2,11.94-9.91,21.55-21.75,21.55Z"/>
+                    <path class="cls-2" d="M79.21,22.25H21.04c-.71,0-1.31-.61-1.31-1.31s.61-1.31,1.31-1.31h58.17c.71,0,1.31.61,1.31,1.31s-.71,1.31-1.31,1.31Z"/>
+                    <path class="cls-2" d="M29.84,50.07h-8.9c-.71,0-1.31-.61-1.31-1.31v-12.54c0-.71.61-1.31,1.31-1.31h8.9c.71,0,1.32.61,1.32,1.31v12.65c0,.61-.61,1.21-1.32,1.21ZM22.25,47.54h6.37v-10.12h-6.37v10.12Z"/>
+                    <path class="cls-2" d="M79.21,50.07h-8.9c-.71,0-1.32-.61-1.32-1.31v-12.54c0-.71.61-1.31,1.32-1.31h8.9c.71,0,1.31.61,1.31,1.31v12.65c-.1.61-.71,1.21-1.31,1.21ZM71.62,47.54h6.27v-10.12h-6.37v10.12h.1Z"/>
+                    <path class="cls-2" d="M57.86,65.25c-.3,0-.51-.1-.71-.2l-7.08-5.16-7.08,5.16c-.4.3-1.01.3-1.52,0-.4-.3-.61-.91-.51-1.42l2.73-8.29-7.08-5.16c-.4-.3-.61-.91-.51-1.42.2-.51.61-.91,1.21-.91h8.7l2.73-8.29c.2-.51.61-.91,1.21-.91s1.01.3,1.21.91l2.73,8.29h8.7c.51,0,1.01.3,1.21.91.2.51,0,1.11-.51,1.42l-7.08,5.16,2.73,8.29c.2.51,0,1.11-.51,1.42-.1.1-.4.2-.61.2ZM50.07,57.05c.3,0,.51.1.71.2l4.65,3.34-1.82-5.46c-.2-.51,0-1.11.51-1.42l4.65-3.34h-5.77c-.51,0-1.01-.3-1.21-.91l-1.72-5.46-1.72,5.56c-.2.51-.61.91-1.21.91h-5.77l4.65,3.34c.4.3.61.91.51,1.42l-1.82,5.46,4.65-3.34c.2-.2.4-.3.71-.3Z"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+             
+            <h4 class="text-xl font-semibold mb-2">Укрепляем Международные Связи</h4>
+            <p class="text-sm text-gray-600">Наши зарубежные партнеры рекомендуют нас.</p>
+           </div>
+       </div>
+   </div>
+</section>
+
+  <!--Section Home-->
+
+  <section aria-labelledby="home" class="relative">
+    <div class="flex flex-wrap-reverse gap-8 justify-center lg:mb-36">
+      <div class="flex gap-6 flex-wrap flex-col items-start lg:justify-center">
+        <div class="flex flex-wrap flex-col items-start gap-2 ">
+          <h2 class="text-4xl font-bold">Регистрируйся и доверься нам!</h2>
+          <p class="max-w-md">Мы помогаем найти лучших работодателей и стать частью прорывных решений.</p>
+        </div>
+        <a href="#" 
+          class="
+            py-2
+            px-6
+            bg-amber-400
+            dark:text-neutral-900
+            flex
+            gap-2
+            shadow-xl
+            hover:shadow-none
+            transition-shadow
+            focus:outline-none
+            focus-visible:ring-4
+            ring-neutral-900
+            rounded-md
+            ring-offset-4
+            ring-offset-white
+            dark:ring-amber-400
+            dark:ring-offset-neutral-800
+        ">
+          Регистрация
+        </a>
+      </div>
+        <img src="./images/tw.jpg" alt="Team work" class="brightness-90 lg:w-2/6 object-center max-w-full rounded-lg">
+    </div>
+  
+    <div 
+      class="
+        bg-teal-900
+        h-24
+        xl:h-48
+        -mx-8 
+        mt-12
+        xl:mt-0
+        xl:absolute
+        w-screen
+        -bottom-8
+        -z-10
+    "></div>
+  </section>
+  </main>
+
+    <section aria-labelledby="contact" class="container mx-auto px-8 overflow-hidden">
+      <div class="flex flex-wrap justify-center gap-12 md:gap-6 lg:gap-20">
+        <div class="md:flex-1 md:max-w-sm relative">
+          <img src="./images/lamp.png" alt="Lamp" class="mx-auto">
+          <a href="#" 
+            class="
+              py-2
+              px-6
+              bg-amber-400
+              dark:text-neutral-900
+              w-max
+              mx-auto
+              mt-12
+              md:mb-12
+              flex
+              gap-2
+              shadow-xl
+              hover:shadow-none
+              transition-shadow
+              focus:outline-none
+              focus-visible:ring-4
+              ring-neutral-900
+              rounded-md
+              ring-offset-4
+              ring-offset-white
+              dark:ring-amber-400
+              dark:ring-offset-neutral-800
+            ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Загружай приложение</span>
+          </a>
+          <!-- <img src="/assets/app.svg" alt="app" width="240" class="hidden md:block drop-shadow-xl absolute left-1/2 -translate-x-1/2 max-w-16 xl:max-w-xs"> -->
+          <div 
+            class="
+              absolute
+              -bottom-18
+              left-1/2
+              -translate-x-1/2
+              -z-10
+              aspect-square
+              md:border-8
+              border-amber-400
+              rounded-full
+              md:w-72
+              lg:w-96
+            ">
+          </div>
+        </div>
+        <form 
+          class="
+            relative
+            border-8
+            border-neutral-900
+            p-6
+            rounded-lg
+            grid
+            gap-8
+            md:flex-1
+            md:max-w-lg
+            my-4
+            md:my-12
+            lg:my-16
+            bg-white
+            dark:bg-neutral-800
+            w-full
+        ">
+      <h2 id="contact" class="text-3xl font-bold">Связаться с нами</h2>
+      <div class="relative">
+        <input type="text" id="name" 
+          class="
+            peer
+            form-input
+            w-full
+            border-4
+            border-amber-400
+            rounded-md
+            focus:ring-4
+            dark:focus:ring-offset-2
+            focus:ring-amber-400
+            focus:border-amber-400
+            focus:outline-none
+            dark:bg-amber-400
+            dark:text-neutral-900
+            placeholder-transparent
+        " 
+        placeholder="Your Name"
+        >
+        <label for="name" 
+        class="
+          text-neutral-500
+          text-sm
+          font-bold
+          uppercase
+          absolute
+          -top-4
+          left-2
+          -translate-y-1/2
+          transition-all
+          peer-placeholder-shown:left-4
+          peer-placeholder-shown:top-1/2
+          peer-placeholder-shown:text-neutral-900
+          peer-focus:-top-4
+          peer-focus:left-2
+          peer-focus:text-neutral-600
+          dark:peer-focus:text-neutral-300
+        ">
+          Имя
+        </label>
+      </div>
+      <div class="relative">
+        <input type="email" id="email" 
+          class="
+            peer
+            form-input
+            w-full
+            border-4
+            border-amber-400
+            rounded-md
+            focus:ring-4
+            dark:focus:ring-offset-2
+            focus:ring-amber-400
+            focus:border-amber-400
+            focus:outline-none
+            dark:bg-amber-400
+            dark:text-neutral-900
+            placeholder-transparent
+          " 
+        placeholder="Your Email">
+        <label for="email" 
+          class="
+          text-neutral-500
+          text-sm
+          font-bold
+          uppercase
+          absolute
+          -top-4
+          left-2
+          -translate-y-1/2
+          transition-all
+          peer-placeholder-shown:left-4
+          peer-placeholder-shown:top-1/2
+          peer-placeholder-shown:text-neutral-900
+          peer-focus:-top-4
+          peer-focus:left-2
+          peer-focus:text-neutral-600
+          dark:peer-focus:text-neutral-300
+        ">
+        Электронная почта
+        </label>
+      </div>
+      <div class="relative">
+        <textarea name="content" id="content" cols="20" rows="5" 
+        class="
+          peer
+          form-textarea
+          resize-none
+          w-full
+          border-4
+          border-amber-400
+          rounded-md
+          focus:ring-4
+          dark:focus:ring-offset-2
+          focus:ring-amber-400
+          focus:border-amber-400
+          focus:outline-none
+          dark:bg-amber-400
+          dark:text-neutral-900
+          placeholder-transparent
+        " 
+        placeholder="How can we help?"></textarea>
+        <label for="content" 
+          class="
+            text-neutral-500
+            text-sm
+            font-bold
+            uppercase
+            absolute
+            -top-3
+            left-2
+            -translate-y-1/2
+            transition-all
+            peer-placeholder-shown:left-4
+            peer-placeholder-shown:top-6
+            peer-placeholder-shown:text-neutral-900
+            peer-focus:-top-4
+            peer-focus:left-2
+            peer-focus:text-neutral-600
+            dark:peer-focus:text-neutral-300
+          ">
+            Напиши нам!
+        </label>
+      </div>
+      <a role="menuitem" 
+        class="
+          py-2
+          px-6
+          bg-neutral-900
+          text-white
+          w-max
+          shadow-xl
+          hover:shadow-none
+          transition-shadow
+          focus:outline-none
+          focus-visible:ring-4
+          ring-neutral-900
+          rounded-md
+          ring-offset-4
+          ring-offset-white
+          dark:ring-offset-amber-400
+        " 
+        href="/"
+        >
+        Отправить
+        </a>
+      </form>
+      </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <div class="bg-amber-400 w-full h-3"></div>
+<footer class="w-full pb-4 md:h-13/20 md:pb-8 bg-teal-900">
+  
+  <div class="w-full pt-10 text-white flex flex-wrap flex-row gap-6 items-start justify-center container mx-auto px-6">
+    
+      <div class="flex flex-col ml-6 w-full md:items-start md:flex-1">
+          <h4 class="text-xl font-bold md:text-2xl">Контакты</h4>
+          <ul class="flex text-sm flex-col md:items-start md:text-base font-thin mt-4">
+            <a href="/" class="mb-2 hover:opacity-70">+375 44 522-22-32</a>
+            <a href="/" class="mb-2 hover:opacity-70">+375 29 666-36-63</a>
+            <a href="/" class="mb-2 hover:opacity-70">office@smartselect.com</a>
+            <a href="/" class="mt-3 py-2
+            px-4
+            bg-amber-500
+            text-white
+            w-max
+            shadow-xl
+            text-[1.1rem]
+            hover:shadow-none
+            hover:bg-amber-400
+            transition-shadow
+            focus:outline-none
+            focus-visible:ring-4
+            ring-neutral-900
+            rounded-md
+            ring-offset-4
+            ring-offset-white
+            dark:ring-offset-neutral-900 ">Заказать звонок</a>
+          </ul>
+      </div>
+
+      <div class="flex flex-col ml-6 w-full mt-4 md:mt-0 md:items-start md:flex-1">
+        <h4 class="text-xl font-bold md:text-2xl">Услуги</h4>
+        <ul class="flex text-sm flex-col md:items-start md:text-base font-thin mt-4">
+            <a href="/" class="mb-2 hover:opacity-70">Подбор персонала</a>
+            <a href="/" class="mb-2 hover:opacity-70">Тренинги и семинары</a>
+            <a href="/" class="mb-2 hover:opacity-70">Стажировки в компаниях</a>
+            <a href="/" class="mb-2 hover:opacity-70">Обучение на рабочем месте</a>
+            <a href="/" class="mb-2 hover:opacity-70">Помощь с резюме</a>
+          </ul>
+      </div>
+
+      <div class="flex flex-col ml-6 w-full mt-4 md:mt-0 md:items-start md:flex-1">
+        <h4 class="text-xl font-bold md:text-2xl">Полезные статьи</h4>
+        <ul class="flex text-sm flex-col md:items-start md:text-base font-thin mt-4">
+            <a href="/" class="mb-2 hover:opacity-70">Как проверить свои скиллы</a>
+            <a href="/" class="mb-2 hover:opacity-70">Ключевые моменты при подготовке к собеседованию</a>
+            <a href="/" class="mb-2 hover:opacity-70">Как побороть волнение</a>
+            <a href="/" class="mb-2 hover:opacity-70">Постфактум анализ и работа над ошибками</a>
+            <a href="/" class="mb-2 hover:opacity-70">Джуниоры Must Know!</a>
+          </ul>
+      </div>
+
+      <div class="flex flex-col ml-6 w-full mt-4 md:mt-0 md:items-start md:flex-1">
+        <h4 class="text-xl font-bold md:text-2xl">Компания</h4>
+          <ul class="flex text-sm flex-col md:items-start md:text-base font-thin mt-4">
+          <a href="/" class="mb-2 hover:opacity-70">"Смарт Селект" ООО</a>
+          <a href="/" class="mb-2 hover:opacity-70">ул. Зыбенская, д.3</a>
+          <a href="/" class="mb-2 hover:opacity-70">г.Минск, Беларусь</a>
+          <a href="/" class="mb-2 hover:opacity-70">Рейтинг 4.8</a>
+        
+        </ul>
+    </div>
+
+    <div class="bg-slate-100 mx-4 w-full h-[1px]"></div>
+
+   <!--Footer bottom-->
+    <div class="flex flex-row flex-wrap w-full justify-start md:mt-0 gap-5 md:items-start">
+      
+        <a href="/" class=" hover:opacity-60 ml-5">
+
+          <img src="./images/logo_w.png" alt="Logo Smart Select" class="w-28 lg:w-36 ">
+        </a>
+        <div class="flex flex-row h-6 items-center ml-3 md:mt-1 justify-center gap-6">
+              <a href="#">
+                <svg width="14" height="14" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.89782 12V6.53514H5.67481L5.93895 4.39547H3.89782V3.03259C3.89782 2.41516 4.06363 1.99243 4.91774 1.99243H6V0.0847928C5.47342 0.0262443 4.94412 -0.00202566 4.41453 0.000112795C2.84383 0.000112795 1.76542 0.994936 1.76542 2.82122V4.39147H0V6.53114H1.76928V12H3.89782Z" fill="white"/>
+                </svg>                            
+            </a>
+            <a href="#">
+              <svg width="16" height="14" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.99536 2.91345C5.17815 2.91345 4.39441 3.23809 3.81655 3.81594C3.2387 4.3938 2.91406 5.17754 2.91406 5.99475C2.91406 6.81196 3.2387 7.5957 3.81655 8.17356C4.39441 8.75141 5.17815 9.07605 5.99536 9.07605C6.81257 9.07605 7.59631 8.75141 8.17417 8.17356C8.75202 7.5957 9.07666 6.81196 9.07666 5.99475C9.07666 5.17754 8.75202 4.3938 8.17417 3.81594C7.59631 3.23809 6.81257 2.91345 5.99536 2.91345ZM5.99536 7.99586C5.46446 7.99586 4.9553 7.78496 4.57989 7.40955C4.20448 7.03415 3.99358 6.52499 3.99358 5.99408C3.99358 5.46318 4.20448 4.95402 4.57989 4.578s61C4.9553 4.20321 5.46446 3.99231 5.99536 3.99231C6.52626 3.99231 7.03542 4.20321 7.41083 4.57861C7.78624 4.95402 7.99714 5.46318 7.99714 5.99408C7.99714 6.52499 7.78624 7.03415 7.41083 7.40955C7.03542 7.78496 6.52626 7.99586 5.99536 7.99586Z" fill="white"/>
+                  <path d="M9.19863 3.51848C9.59537 3.51848 9.91698 3.19687 9.91698 2.80013C9.91698 2.4034 9.59537 2.08179 9.19863 2.08179C8.8019 2.08179 8.48029 2.4034 8.48029 2.80013C8.48029 3.19687 8.8019 3.51848 9.19863 3.51848Z" fill="white"/>
+                  <path d="M11.6821 2.06975C11.5279 1.67138 11.2921 1.30961 10.99 1.00759C10.6879 0.705576 10.326 0.469972 9.92759 0.31586C9.46135 0.140842 8.9688 0.0462069 8.4709 0.0359839C7.82919 0.00799638 7.62594 0 5.99867 0C4.37139 0 4.16282 -6.70254e-08 3.52643 0.0359839C3.02891 0.0456842 2.53671 0.140339 2.07108 0.31586C1.67255 0.469792 1.31059 0.705333 1.00844 1.00737C0.706289 1.30941 0.47061 1.67127 0.316526 2.06975C0.141474 2.53595 0.0470554 3.02855 0.0373167 3.52643C0.00866281 4.16748 0 4.37072 0 5.99867C0 7.62594 -4.96485e-09 7.83319 0.0373167 8.4709C0.0473123 8.96935 0.14127 9.46113 0.316526 9.92825C0.471042 10.3266 0.70695 10.6883 1.00918 10.9903C1.3114 11.2923 1.6733 11.5279 2.07175 11.6821C2.5365 11.8642 3.0289 11.9656 3.52777 11.982C4.16948 12.01 4.37272 12.0187 6 12.0187C7.62728 12.0187 7.83585 12.0187 8.47223 11.982C8.97008 11.9719 9.46262 11.8775 9.92892 11.7028C10.3272 11.5483 10.689 11.3125 10.9911 11.0104C11.2932 10.7083 11.529 10.3466 11.6835 9.94825C11.8587 9.48179 11.9527 8.99 11.9627 8.49156C11.9913 7.85051 12 7.64727 12 6.01932C12 4.39138 12 4.18481 11.9627 3.54709C11.9549 3.04216 11.86 2.54237 11.6821 2.06975ZM10.8705 8.42159C10.8662 8.80562 10.7961 9.18608 10.6633 9.54642C10.5632 9.80555 10.41 10.0409 10.2135 10.2372C10.017 10.4336 9.78162 10.5867 9.52243 10.6866C9.16608 10.8188 8.78967 10.8889 8.4096 10.8938C7.77654 10.9231 7.59796 10.9305 5.97468 10.9305C4.35007 10.9305 4.18414 10.9305 3.53909 10.8938C3.15921 10.8892 2.78298 10.8191 2.42692 10.6866C2.16683 10.5873 1.93048 10.4345 1.73316 10.2381C1.53584 10.0417 1.38194 9.80605 1.28143 9.54642C1.15045 9.18995 1.08039 8.81398 1.07419 8.43425C1.04554 7.8012 1.03887 7.62261 1.03887 5.99933C1.03887 4.37539 1.03887 4.20946 1.07419 3.56375C1.0785 3.17993 1.14859 2.7997 1.28143 2.43958C1.48467 1.91382 1.90116 1.5 2.42692 1.29876C2.78316 1.16691 3.15928 1.09682 3.53909 1.09151C4.17281 1.06286 4.35073 1.05486 5.97468 1.05486C7.59862 1.05486 7.76522 1.05486 8.4096 1.09151C8.7897 1.09609 9.16617 1.1662 9.52243 1.29876C9.7816 1.39889 10.017 1.55211 10.2134 1.74858C10.4099 1.94504 10.5631 2.18041 10.6633 2.43958C10.7942 2.79606 10.8643 3.17203 10.8705 3.55175C10.8992 4.18547 10.9065 4.36339 10.9065 5.98734C10.9065 7.61062 10.9065 7.78521 10.8778 8.42226H10.8705V8.42159Z" fill="white"/>
+              </svg>    
+          </a>
+
+            <a href="https://www.youtube.com/channel/UCjtCbnkIaiCJgj13sEZ9iqw">
+              <svg width="16" height="16" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.7355 1.415C12.6616 1.14357 12.517 0.896024 12.3162 0.697014C12.1154 0.498004 11.8654 0.354468 11.5911 0.280692C10.5739 0.00450089 6.5045 4.87928e-06 6.5045 4.87928e-06C6.5045 4.87928e-06 2.43578 -0.00449139 1.41795 0.259496C1.14379 0.336667 0.894302 0.482233 0.693428 0.68222C0.492554 0.882207 0.347041 1.1299 0.270859 1.40152C0.00259923 2.40737 9.51671e-07 4.49358 9.51671e-07 4.49358C9.51671e-07 4.49358 -0.0025972 6.59006 0.263714 7.58564C0.413109 8.13609 0.851549 8.57094 1.40885 8.71931C2.43643 8.9955 6.49476 9 6.49476 9C6.49476 9 10.5641 9.00449 11.5813 8.74115C11.8557 8.6675 12.106 8.52429 12.3073 8.32569C12.5086 8.12709 12.6539 7.87996 12.729 7.60876C12.998 6.60355 12.9999 4.51798 12.9999 4.51798C12.9999 4.51798 13.0129 2.42086 12.7355 1.415ZM5.20282 6.42628L5.20607 2.57244L8.58823 4.50257L5.20282 6.42628Z" fill="white"/>
+              </svg>                            
+          </a>
+      </div>
+      <div class="w-full ml-4 md:text-end md:ml-auto md:mr-4 md:mt-1 md:w-1/3">
+        <p class="text-sm">&copy; Copyright 2024 Smart Select</p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+    
+    
+  </body>
+</html>
